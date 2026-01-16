@@ -13,7 +13,8 @@ if ($user && password_verify($password, $user['password'])) {
   $_SESSION['usuario_id'] = $user['id'];
   $_SESSION['usuario'] = $user['usuario'];
 
-  header("Location: minutario.php");
+  // 👇 IMPORTANTE
+  header("Location: login.php?success=1");
   exit;
 }
 
